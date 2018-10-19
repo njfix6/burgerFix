@@ -27,7 +27,7 @@ class Image extends React.Component {
           },
           layout: {
             'icon-image': this.id,
-            'icon-size': 0.25
+            'icon-size': 0.1
           }
         })
       })
