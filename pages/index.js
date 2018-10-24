@@ -1,10 +1,7 @@
 import Head from 'next/head'
-import Map from './Map'
-import Image from './Image'
+import {Marker} from 'react-map-gl';
 import NoSSR from 'react-no-ssr'
-
-const coordinates = [-122.418578, 37.784388]
-const burger = <Image url="/static/burger-fix-2.png" coordinates={coordinates}/>
+import Map from './Map'
 
 export default () =>
   <div className="main">
@@ -14,15 +11,19 @@ export default () =>
       <link rel="icon" type="image/png" href="/static/burger-fix-2.png"/>
     </Head>
     <NoSSR onSSR={<img className="loadingBurger" src="/static/burger-fix-2.png"/>}>
-      <Map
-        center={[-122.4394, 37.7638]}
-        zoom={11.5}
-        style="mapbox://styles/nfix/cj9bxyzut4r3g2spig03mos2h"
-      >
-      {burger}
+      <Map>
+        <Marker latitude={37.784388} longitude={-122.418578} offsetLeft={-20} offsetTop={-20}>
+          <div><img src="/static/burger-fix-2.png"/></div>
+        </Marker>
       </Map>
     </NoSSR>
     <style jsx>{`
+      img {
+        width: 40px;
+        height: auto;
+      }
+    `}</style>
+    <style global jsx>{`
       .main {
         height: 100%;
         width: 100%;
