@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import {Marker} from 'react-map-gl';
+import {Marker, Popup} from 'react-map-gl';
 import NoSSR from 'react-no-ssr'
 import Map from './Map'
 
@@ -10,20 +10,34 @@ export default () =>
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       <link rel="icon" type="image/png" href="/static/burger-fix-2.png"/>
     </Head>
+    <img className="main-title" src="/static/burger-fix-1.png"/>
     <NoSSR onSSR={<img className="loadingBurger" src="/static/burger-fix-2.png"/>}>
       <Map>
         <Marker latitude={37.784388} longitude={-122.418578} offsetLeft={-20} offsetTop={-20}>
-          <div><img src="/static/burger-fix-2.png"/></div>
+          <div><img className="burger" src="/static/burger-fix-5.png"/></div>
+        </Marker>
+        <Marker latitude={37.784388} longitude={-122.428578} offsetLeft={-20} offsetTop={-20}>
+          <div><img className="burger" src="/static/burger-fix-5.png"/></div>
         </Marker>
       </Map>
     </NoSSR>
     <style jsx>{`
-      img {
-        width: 40px;
+      .burger {
+        width: 35px;
         height: auto;
+      }
+      .main-title {
+        position: absolute;
+        left: 0px;
+        top 0px;
+        z-index:10;
+        width: 100px;
+        height: auto;
+
       }
     `}</style>
     <style global jsx>{`
+
       .main {
         height: 100%;
         width: 100%;

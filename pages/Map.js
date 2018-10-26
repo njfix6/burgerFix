@@ -1,6 +1,10 @@
 import React from 'react'
-import ReactMapGL, {Marker} from 'react-map-gl';
+import ReactMapGL, {Marker, Popup} from 'react-map-gl';
 import WindowSize from "@reach/window-size";
+import CITIES from '../data.json';
+import Burger from './Burger';
+import CityInfo from './city-info';
+
 
 class Map extends React.Component {
   state = {
@@ -11,6 +15,48 @@ class Map extends React.Component {
     }
   };
 
+  componentDidMount() {
+    window.addEventListener('resize', this._resize);
+    this._resize();
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('resize', this._resize);
+  }
+  _resize = () => {
+    this.setState({
+      viewport: {
+        ...this.state.viewport,
+        width: this.props.width || window.innerWidth,
+        height: this.props.height || window.innerHeight
+      }
+    });
+  };
+
+
+
+  _renderPopup() {
+    const {popupInfo} = this.state;
+
+    return popupInfo && (
+      <Popup tipSize={5}
+        anchor="top"
+        longitude={popupInfo.longitude}
+        latitude={popupInfo.latitude}
+        onClose={() => this.setState({popupInfo: null})} >
+        <CityInfo info={popupInfo} />
+      </Popup>
+    );
+  }
+  _renderCityMarker = (city, index) => {
+    return (
+      <Marker offsetLeft={-20} offsetTop={-20} key={`marker-${index}`}
+        longitude={city.longitude}
+        latitude={city.latitude} >
+        <Burger size={20} onClick={() => this.setState({popupInfo: city})} />
+      </Marker>
+    );
+  }
   render() {
     return (
       <WindowSize>
@@ -24,6 +70,8 @@ class Map extends React.Component {
             maxZoom={14}
             onViewportChange={(viewport) => this.setState({viewport})}
           >
+            { CITIES.map(this._renderCityMarker) }
+            {this._renderPopup()}
             {this.props.children}
           </ReactMapGL>
         )}
