@@ -4,7 +4,7 @@ import WindowSize from "@reach/window-size";
 import CITIES from '../data.json';
 import Burger from './Burger';
 import CityInfo from './city-info';
-
+import PopupMarker from './Marker';
 
 class Map extends React.Component {
   state = {
@@ -70,9 +70,7 @@ class Map extends React.Component {
             maxZoom={14}
             onViewportChange={(viewport) => this.setState({viewport})}
           >
-            { CITIES.map(this._renderCityMarker) }
-            {this._renderPopup()}
-            {this.props.children}
+            <PopupMarker />
           </ReactMapGL>
         )}
       </WindowSize>
