@@ -10,10 +10,7 @@ export default class CityInfo extends PureComponent {
     return (
       <div>
         <div>
-          {displayName} | <a target="_new"
-          href={`http://en.wikipedia.org/w/index.php?title=Special:Search&search=${displayName}`}>
-            Wikipedia
-          </a>
+          {displayName}
         </div>
         <img width={240} src={info.image} />
       </div>
