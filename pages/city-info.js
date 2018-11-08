@@ -5,7 +5,7 @@ export default class CityInfo extends PureComponent {
 
   render() {
     const {info} = this.props;
-    const displayName = `${info.city}, ${info.state}`;
+    const displayName = `${info.name}`;
 
     return (
       <div>

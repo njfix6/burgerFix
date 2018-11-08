@@ -63,5 +63,9 @@ export default () =>
       @keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
 
       #map { position:absolute; top:0; bottom:0; width:100%; }
+
+      .mapboxgl-popup {
+        z-index:50;
+      }
     `}</style>
   </div>

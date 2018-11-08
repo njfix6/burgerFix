@@ -19,7 +19,7 @@ export default class PopupMarker extends React.Component {
           <Burger size={20} onClick={() => this.setState({open: true})} />
         </Marker>
         {this.state.open && (
-          <Popup tipSize={5}
+          <Popup className="popup" tipSize={5}
             anchor="top"
             longitude={info.longitude}
             latitude={info.latitude}
@@ -27,6 +27,11 @@ export default class PopupMarker extends React.Component {
             <CityInfo info={info} />
           </Popup>
         )}
+        <style jsx>{`
+          .popup {
+            z-index:50;
+          }
+        `}</style>
       </React.Fragment>
     );
   }
