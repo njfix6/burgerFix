@@ -11,7 +11,8 @@ class Map extends React.Component {
       latitude: 37.7638,
       longitude: -122.4394,
       zoom: 11.5
-    }
+    },
+    markerOpen: null
   };
 
   componentDidMount() {
@@ -46,7 +47,15 @@ class Map extends React.Component {
             onViewportChange={(viewport) => this.setState({viewport})}
           >
             <div>
-              {CITIES.map(loc => <PopupMarker key={loc.city} {...loc} />)}
+              {CITIES.map(loc =>
+                <PopupMarker
+                  key={loc.name}
+                  {...loc}
+                  open={this.state.markerOpen === loc.name}
+                  onOpen={() => this.setState({ markerOpen: loc.name })}
+                  onClose={() => this.setState({ markerOpen: null })}
+                />
+              )}
             </div>
           </ReactMapGL>
         )}

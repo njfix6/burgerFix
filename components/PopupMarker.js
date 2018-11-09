@@ -4,10 +4,6 @@ import Burger from './Burger';
 import CityInfo from './CityInfo'
 
 export default class PopupMarker extends React.Component {
-  state = {
-    open: false
-  }
-
   render() {
     const info = this.props
     return (
@@ -15,14 +11,17 @@ export default class PopupMarker extends React.Component {
         <Marker offsetLeft={-20} offsetTop={-20}
           longitude={info.longitude}
           latitude={info.latitude} >
-          <Burger size={20} onClick={() => this.setState({open: true})} />
+          <Burger size={20} onClick={this.props.onOpen} />
         </Marker>
-        {this.state.open && (
-          <Popup className="popup" tipSize={5}
+        {this.props.open && (
+          <Popup
+            className="popup"
+            tipSize={5}
             anchor="top"
             longitude={info.longitude}
             latitude={info.latitude}
-            onClose={() => this.setState({open: false})} >
+            onClose={this.props.onClose}
+          >
             <CityInfo {...info} />
           </Popup>
         )}
