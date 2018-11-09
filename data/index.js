@@ -1,4 +1,4 @@
-[
+module.exports = [
   {
     "name":"Rusty’s Southern",
     "image":"http://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/San_Francisco_skyline_from_Coit_Tower.jpg/240px-San_Francisco_skyline_from_Coit_Tower.jpg",

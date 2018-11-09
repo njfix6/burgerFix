@@ -1,8 +1,7 @@
 import React from 'react'
-import ReactMapGL, {Marker, Popup} from 'react-map-gl';
-import CityInfo from './city-info';
-import CITIES from '../data.json';
+import {Marker, Popup} from 'react-map-gl';
 import Burger from './Burger';
+import CityInfo from './CityInfo'
 
 export default class PopupMarker extends React.Component {
   state = {
@@ -24,7 +23,7 @@ export default class PopupMarker extends React.Component {
             longitude={info.longitude}
             latitude={info.latitude}
             onClose={() => this.setState({open: false})} >
-            <CityInfo info={info} />
+            <CityInfo {...info} />
           </Popup>
         )}
         <style jsx>{`

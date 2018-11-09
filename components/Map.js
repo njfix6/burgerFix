@@ -1,10 +1,9 @@
 import React from 'react'
-import ReactMapGL, {Marker, Popup} from 'react-map-gl';
+import ReactMapGL from 'react-map-gl';
 import WindowSize from "@reach/window-size";
-import CITIES from '../data.json';
-import Burger from './Burger';
-import CityInfo from './city-info';
-import PopupMarker from './Marker';
+import PopupMarker from './PopupMarker';
+
+import CITIES from '../data';
 
 class Map extends React.Component {
   state = {

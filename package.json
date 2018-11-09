@@ -23,9 +23,9 @@
   "dependencies": {
     "@reach/window-size": "^0.1.1",
     "mapbox-gl": "^0.50.0",
-    "next": "^6.1.1",
-    "react": "^16.4.2",
-    "react-dom": "^16.4.2",
+    "next": "^7.0.2",
+    "react": "^16.6.1",
+    "react-dom": "^16.6.1",
     "react-fade-in": "^0.1.6",
     "react-map-gl": "^3.3.7",
     "react-no-ssr": "^1.1.0",

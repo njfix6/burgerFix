@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import {Marker, Popup} from 'react-map-gl';
 import NoSSR from 'react-no-ssr'
-import Map from './Map'
+import Map from '../components/Map'
 
 export default () =>
   <div className="main">
