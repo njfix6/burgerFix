@@ -18,6 +18,11 @@ module.exports = [
     "name":"4505 Burgers & BBQ",
     "image":"http://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/San_Francisco_skyline_from_Coit_Tower.jpg/240px-San_Francisco_skyline_from_Coit_Tower.jpg",
     "latitude":37.776160,
-    "longitude":-122.438340
+    "longitude":-122.438340,
+    "whattoorder": [
+      "Double Burger",
+      "Spicy Fries"
+
+    ]
   }
 ]

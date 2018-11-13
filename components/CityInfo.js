@@ -7,12 +7,26 @@ export default class CityInfo extends PureComponent {
     const info = this.props;
 
     return (
-      <div>
-        <div>
-          {info.name}
+      <React.Fragment>
+        <div className="background">
+          <div className="name">
+            {info.name}
+          </div>
+          <div className="name">
+            <u>What to order:</u>
+          </div>
+          <div className="whattoorder">
+            {info.whattoorder.map(item => (
+              <div>{item}</div>
+            ))}
+          </div>
         </div>
-        <img width={240} src={info.image} />
-      </div>
+        <style jsx>{`
+          .div {
+            font-family: Arial, Helvetica, sans-serif;
+          }
+        `}</style>
+      </React.Fragment>
     );
   }
 }

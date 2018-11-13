@@ -9,6 +9,8 @@ export default () =>
       <title>Burger Fix</title>
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       <link rel="icon" type="image/png" href="/static/burger-fix-2.png"/>
+      <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.51.0/mapbox-gl.js'></script>
+      <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.51.0/mapbox-gl.css' rel='stylesheet' />
     </Head>
     <img className="main-title" src="/static/burger-fix-1.png"/>
     <NoSSR onSSR={<img className="loadingBurger" src="/static/burger-fix-2.png"/>}>
@@ -67,5 +69,6 @@ export default () =>
       .mapboxgl-popup {
         z-index:50;
       }
+      
     `}</style>
   </div>
