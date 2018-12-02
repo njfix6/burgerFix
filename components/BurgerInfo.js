@@ -10,7 +10,7 @@ export default class BurgerInfo extends PureComponent {
       <React.Fragment>
         <div className="background">
           <div className="header">
-            {info.name}
+            {info.name} <div className="grade"> {info.grade}</div>
           </div>
           <div className="name">
             <div className="whattoordertitle">What to order:</div>
@@ -25,6 +25,11 @@ export default class BurgerInfo extends PureComponent {
             font-weight: bold;
             font-size: 25px;
             line-height: 50px;
+            display: inline-block;
+          }
+          .grade {
+            display: inline-block;
+            color: red;
           }
           .whattoordertitle {
             font-weight: bold;
