@@ -1,7 +1,7 @@
 import React from 'react'
 import {Marker, Popup} from 'react-map-gl';
 import Burger from './Burger';
-import CityInfo from './CityInfo'
+import BurgerInfo from './BurgerInfo'
 
 export default class PopupMarker extends React.Component {
   render() {
@@ -22,7 +22,7 @@ export default class PopupMarker extends React.Component {
             latitude={info.latitude}
             onClose={this.props.onClose}
           >
-            <CityInfo {...info} />
+            <BurgerInfo {...info} />
           </Popup>
         )}
         <style jsx>{`
