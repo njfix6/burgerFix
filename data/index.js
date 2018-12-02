@@ -7,7 +7,8 @@ module.exports = [
     "grade": "A+",
     "whattoorder": {
       "burger": "Double Burger",
-      "fries": "Spicy Fries"
+      "fries": "Spicy Fries",
+      "sauces": "Garlec Aoili"
     }
   },{
     "name":"Marlowe",
@@ -17,7 +18,8 @@ module.exports = [
     "grade": "A+",
     "whattoorder": {
       "burger": "Double Burger",
-      "fries": "Spicy Fries"
+      "fries": "Spicy Fries",
+      "sauces": "Garlec Aoili"
     }
   },{
     "name":"Mezcalito",
@@ -27,7 +29,8 @@ module.exports = [
     "grade": "A+",
     "whattoorder": {
       "burger": "Double Burger",
-      "fries": "Spicy Fries"
+      "fries": "Spicy Fries",
+      "sauces": "Garlec Aoili"
     }
   },{
     "name":"4505 Burgers & BBQ",
@@ -37,7 +40,8 @@ module.exports = [
     "grade": "A+",
     "whattoorder": {
       "burger": "Double Burger",
-      "fries": "Spicy Fries"
+      "fries": "Spicy Fries",
+      "sauces": "Garlec Aoili"
     }
   }
 ]
