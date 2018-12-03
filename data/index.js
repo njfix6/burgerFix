@@ -5,10 +5,9 @@ module.exports = [
     "latitude":37.784340,
     "longitude":-122.416970,
     "grade": "A+",
+    "reward": "Best Burger",
     "whattoorder": {
-      "burger": "Double Burger",
-      "fries": "Spicy Fries",
-      "sauces": "Garlec Aoili"
+      "burger": "OTM Burger"
     }
   },{
     "name":"Marlowe",
@@ -18,8 +17,7 @@ module.exports = [
     "grade": "A+",
     "whattoorder": {
       "burger": "Double Burger",
-      "fries": "Spicy Fries",
-      "sauces": "Garlec Aoili"
+      "fries": "Spicy Fries"
     }
   },{
     "name":"Mezcalito",
@@ -29,8 +27,7 @@ module.exports = [
     "grade": "A+",
     "whattoorder": {
       "burger": "Double Burger",
-      "fries": "Spicy Fries",
-      "sauces": "Garlec Aoili"
+      "fries": "Spicy Fries"
     }
   },{
     "name":"4505 Burgers & BBQ",
@@ -38,10 +35,13 @@ module.exports = [
     "latitude":37.776160,
     "longitude":-122.438340,
     "grade": "A+",
+    "reward": "Best Burger Experience",
     "whattoorder": {
       "burger": "Double Burger",
-      "fries": "Spicy Fries",
-      "sauces": "Garlec Aoili"
+      "fries": "Spicy Fries"
+    },
+    "comeswith": {
+      "sauces": "BBQ Sauce, Mustard Sauce, and Special Sauce"
     }
   }
 ]

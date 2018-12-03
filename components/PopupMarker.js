@@ -11,7 +11,7 @@ export default class PopupMarker extends React.Component {
         <Marker offsetLeft={-20} offsetTop={-20}
           longitude={info.longitude}
           latitude={info.latitude} >
-          <Burger size={20} onClick={this.props.onOpen} />
+          <Burger size={20} onClick={this.props.onOpen} reward={this.props.reward} />
         </Marker>
         {this.props.open && (
           <Popup
