@@ -9,9 +9,6 @@ export default class BurgerInfo extends PureComponent {
     return (
       <React.Fragment>
         <div className="background">
-          <div className="header">
-            {info.name}<div className="grade"> {info.grade}</div>
-          </div>
           {
             info.reward && (
               <div className="reward-section">
@@ -19,6 +16,10 @@ export default class BurgerInfo extends PureComponent {
                 <div className="order-info reward-info">{info.reward}</div>
               </div>
           )}
+          <div className="header">
+            {info.name}<div className="grade"> {info.grade}</div>
+          </div>
+
           <div className="name">
             <div className="whattoordertitle">What to order:</div>
           </div>
@@ -63,6 +64,20 @@ export default class BurgerInfo extends PureComponent {
                         <td><div className="order-info fries-info">{info.comeswith.sauces}</div></td>
                       </tr>
                     )}
+                    {
+                      info.comeswith.fries && (
+                        <tr>
+                          <td><img className="icon-image fries-image" src="/static/fries.png"/></td>
+                          <td><div className="order-info fries-info">{info.comeswith.fries}</div></td>
+                        </tr>
+                    )}
+                    {
+                      info.comeswith.bread && (
+                        <tr>
+                          <td><img className="icon-image fries-image" src="/static/fries.png"/></td>
+                          <td><div className="order-info fries-info">{info.comeswith.bread}</div></td>
+                        </tr>
+                    )}
                     </tbody>
                   </table>
                 </React.Fragment>
@@ -76,9 +91,8 @@ export default class BurgerInfo extends PureComponent {
           }
           .header {
             font-weight: bold;
-            font-size: 25px;
-            line-height: 70px;
-            margin-top:5px;
+            font-size: 35px;
+
           }
           .grade {
             display: inline-block;
@@ -107,11 +121,12 @@ export default class BurgerInfo extends PureComponent {
           }
           .reward-section{
 
-            line-height: 40px;
           }
           .reward-info{
             margin-left: 6px;
             vertical-align:top;
+            color: grey;
+            font-size: 15px;
           }
           .reward-image{
             vertical-align:bottom;
